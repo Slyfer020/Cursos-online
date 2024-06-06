@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Sungla</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!--Para el icono-->
+      <link rel="shortcut icon" href="icon/icon.svg" type="image/x-icon">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="animation/dbclick.js"></script>
+   </head>
+   <!-- body -->
+   <body class="main-layout position_head">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <marquee direction="down"><a href="index.html"><img src="images/logo.png" alt="#" /></a></marquee>
+                              <form class="d-flex" role="search">
+                                 <input class="form-control me-2 nav-link"  onkeydown="checkEnter(event)" type="search" id="searchInput" placeholder="" aria-label="Search">
+                                 <select id="categoryFilter">
+                                    <!-- Opciones de categorías -->
+                                    <option value="">Todos</option>
+                                    <option value="categoria1">Fácil</option>
+                                    <option value="categoria2">Mediano</option>
+                                    <option value="categoria3">Avanzado</option>
+                                </select>
+                                 <button onclick="search()" class="nav-link" type="button">Buscar</button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item ">
+                                 <a class="nav-link" href="index.html">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.html">Acerca de</a>
+                              </li>
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="glasses.html">Cursos</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="shop.html">Novedades</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Contacto</a>
+                              </li>
+                              <li class="nav-item d_none login_btn">
+                                 <a class="nav-link" href="inicio_sesion/inicio_sesion.html">Login</a>
+                              </li>
+                              <li class="nav-item d_none">
+                                 <a class="nav-link" href="inicio_sesion/registro.html">Register</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+                 <!--  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                     <ol class="breadcrumb">
+                       <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                       <li class="breadcrumb-item active" aria-current="page">Cursos</li>
+                     </ol>
+                  </nav> -->
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Our  Glasses section -->
+      <div class="glasses">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 offset-md-1">
+                  <div class="titlepage">
+                     <h2>Cursos disponibles</h2>
+                     <p>Para realizar el filtro de búsqueda, puedes poner la categoría de los cursos, también puedes poner las palabras o el nombre completo del cursos para que lo busque. Se ocultan los demás al realizar la búsqueda.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--Cursos-->
+         <div class="container-fluid">
+            <div id="itemContainer" class="row" style="padding: 30px;">
+               <div data-section-id="seccion1" data-category="categoria2" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image_glass" src="images/python1.png" style="width: 20px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>1061</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Python básico</p>
+                  
+               </div>
+               <div data-section-id="seccion2" data-category="categoria1" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image_glass" src="images/c++1.png" style="width: 20px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>900</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>C++, </p>
+                  
+               </div>
+               <div data-section-id="seccion3" data-category="categoria2" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image_glass" src="images/go1.png" style="width: 50px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>1870</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Curso intermedio de Go</p>
+                  
+               </div>
+               <div data-section-id="seccion4" data-category="categoria3" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image_glass" src="images/php1.png" style="width: 50px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>3450</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Backend con php</p>
+                  
+               </div>
+               <div data-section-id="seccion5" data-category="categoria2" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                 
+                     <figure><img class="double_clickable_image" src="images/ruby1.png" style="width: 20px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>900</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Desarrollo web básico con Ruby</p>
+                  
+               </div>
+               <div data-section-id="seccion6" data-category="categoria1" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image" src="images/perl1.png" style="width: 20px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>850</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Fundamentos de Perl</p>
+                  
+               </div>
+               <div data-section-id="seccion7" data-category="categoria3" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image" src="images/kotlin1.png" style="width: 50px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>2890</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Aplicación de citas con Kotlin</p>
+                  
+               </div>
+
+               <div data-section-id="seccion8" data-category="categoria1" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 glasses_box">
+                  
+                     <figure><img class="double_clickable_image" src="images/swift1.png" style="width: 50px;" alt="#"/></figure>
+                     <h3><span class="blu">$</span>590</h3>
+                     <a class="read_more" href="#">Agregar</a>
+                     <p>Introducción a Swift</p>
+                  
+               </div>
+               <div class="col-md-12">
+                  <a class="read_more" href="#">Pagar</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Our  Glasses section -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Location</li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> +01 1234567890</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> vdroid@gmail.com</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2024 All Rights Reserved</p>
+                        <div class="float-end"><a href="#"><img src="icon/WebsymbolUpCircle.svg" style="width: 40px;" alt=""> Up</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!--Funciones de los filtros de búsqueda-->
+      <script>
+         //Funcionamiento del ENTER
+         function checkEnter(event) {
+            if (event.key === 'Enter') {
+               // Evita que el formulario se envíe al presionar Enter
+               event.preventDefault();
+               // Realiza la búsqueda
+               search();
+            }
+         }
+         function search() {
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            var categoryFilter = document.getElementById("categoryFilter").value.toLowerCase();
+            var items = document.querySelectorAll("#itemContainer div");
+
+            items.forEach(function(item) {
+                var content = item.innerHTML.toLowerCase();
+                var category = item.getAttribute('data-category').toLowerCase();
+
+                var searchTermMatch = content.includes(searchTerm);
+                var categoryMatch = (categoryFilter === "" || category === categoryFilter);
+
+               if (searchTermMatch && categoryMatch) {
+                  item.style.display = "block";
+               } else {
+                  item.style.display = "none";
+               }
+            });
+         }
+
+      </script>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
+
