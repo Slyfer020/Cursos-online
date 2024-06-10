@@ -26,6 +26,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="animation/unclick.js"></script>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -48,6 +49,7 @@
                         <div class="center-desk">
                            <div class="logo">
                               <marquee direction="down"><a href="index.html"><img src="images/logo.png" alt="#" /></a></marquee>
+                              
                            </div>
                         </div>
                      </div>
@@ -62,13 +64,13 @@
                               <li class="nav-item ">
                                  <a class="nav-link" href="index.html">Inicio</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="about.html">Acerca de</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="glasses.html">Cursos</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="shop.html">Novedades</a>
                               </li>
                               <li class="nav-item">
@@ -87,7 +89,7 @@
                   <!-- <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                      <ol class="breadcrumb">
                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                       <li class="breadcrumb-item active" aria-current="page">Acerca de</li>
+                       <li class="breadcrumb-item active" aria-current="page">Novedades</li>
                      </ol>
                   </nav> -->
                </div>
@@ -96,26 +98,28 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- about section -->
-      <div class="about">
-         <div class="container">
-            <div class="row d_flex">
+      <!-- Our shop section -->
+      <div id="about" class="shop">
+         <div class="container-fluid">
+            <div class="row">
                <div class="col-md-5">
-                  <div class="about_img">
-                     <figure><img class="aboaut" src="images/cursos.jpg" alt="#"/></figure>
+                  <div  class="shop_img">
+                     <figure><img class="shop" src="images/curso_python.jpg" alt="#"/></figure>
                   </div>
                </div>
-               <div class="col-md-7">
-                  <div class="titlepage">
-                     <marquee direction="right"><h2 data-section-id="miContenedor">Acerca de nuestros cursos</h2></marquee>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+               <div class="col-md-7 padding_right0">
+                  <div class="max_width">
+                     <div class="titlepage">
+                        <h2>Próximo curso</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                        
+                     </div>
                   </div>
-                  <a class="read_more" href="#">Saber más</a>
                </div>
             </div>
          </div>
       </div>
-      <!-- about section -->
+      <!-- end Our shop section -->
       <!--  footer -->
       <footer>
          <div class="footer">
